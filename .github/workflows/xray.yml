@@ -33,6 +33,6 @@ jobs:
         overwrite: true
         release_name: "xray" 
         compress_assets: "zip"
-        build_flags: "-trimpath"
+        build_flags: "-trimpath CGO_ENABLED=0"
       
        
