@@ -28,10 +28,10 @@ jobs:
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         project_path: "./tmp/main"
-        binary_name: "xray"
+        binary_name: "xray-fixed"
         ldflags: "-s -w -buildid="
         overwrite: true
-        release_name: "xray-fixed" 
+        release_name: "xray" 
         compress_assets: "zip"
         build_flags: "-trimpath"
         pre_command: "env CGO_ENABLED=0"
