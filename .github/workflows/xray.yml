@@ -21,7 +21,7 @@ jobs:
     - name: Cloning repo
       run: |
         rm -rf ./{,.[!.],..?}*
-        git clone https://github.com/XTLS/Xray-core ./tmp
+        git clone https://github.com/asiaqa/Xray-core ./tmp
     - uses: wangyoucao577/go-release-action@v1.34
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
         binary_name: "xray"
         ldflags: "-s -w -buildid="
         overwrite: true
-        release_name: "xray" 
+        release_name: "xray-fixed" 
         compress_assets: "zip"
         build_flags: "-trimpath"
         pre_command: "env CGO_ENABLED=0"
